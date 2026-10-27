@@ -1,0 +1,6 @@
+{
+  "name": "Birthday Universe 🎀 | A Magical Surprise Adventure",
+  "description": "A cinematic, interactive birthday adventure filled with cute cats, mystery gifts, playful stories, photography studio surprises, and heartfelt memories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

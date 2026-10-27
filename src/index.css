@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-pastel-pink: #F8BBD0;
+    --color-blush-pink: #FCE4EC;
+    --color-candy-pink: #F7A8C4;
+    --color-warm-white: #FFFDFE;
+    --color-lavender: #E8DDF8;
+    --color-rose-pink: #FF6FA5;
+    --color-dark-text: #5A3D4D;
+    --color-peach: #FFE1D2;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #5A3D4D;
+    background-color: #FFFDFE;
+    margin: 0;
+    padding: 0;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-cute {
+  font-family: 'Fredoka', 'Quicksand', system-ui, sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Dreamy glow effects */
+.pink-glow {
+  box-shadow: 0 0 35px rgba(255, 111, 165, 0.35), 0 0 70px rgba(248, 187, 208, 0.25);
+}
+
+.pink-glow-sm {
+  box-shadow: 0 4px 20px rgba(255, 111, 165, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 253, 254, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+}
+
+.glass-card-pink {
+  background: rgba(254, 240, 246, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(248, 187, 208, 0.5);
+}
+
+/* Keyframe animations for continuous ambient delight */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 111, 165, 0.35));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 111, 165, 0.65));
+    transform: scale(1.03);
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+@keyframes ribbonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatGentle 5s ease-in-out infinite 1.5s;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkleTwinkle 2.2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for gallery */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FCE4EC;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F7A8C4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6FA5;
+}

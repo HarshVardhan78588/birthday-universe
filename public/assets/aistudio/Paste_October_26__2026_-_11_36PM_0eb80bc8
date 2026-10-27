@@ -1,0 +1,1039 @@
+# PROJECT: A CUTE, CINEMATIC, INTERACTIVE BIRTHDAY EXPERIENCE
+
+Act as a world-class creative frontend developer, motion designer, UI/UX designer, and interactive storytelling engineer.
+
+Build a complete, fully functional, highly polished, interactive birthday surprise website for a special girl.
+
+This is NOT a generic birthday website, a static portfolio, or a collection of cards. It is a personalised, cinematic, multi-scene birthday adventure where the user explores a sequence of adorable, funny, emotional, and memorable experiences.
+
+The entire website must have a consistent, dreamy pink aesthetic with cute cat characters, soft lighting, pastel colours, playful typography, beautiful animations, and exceptionally smooth transitions.
+
+The experience should feel handcrafted, personal, magical, and delightful.
+
+Do not stop at designing a mockup. IMPLEMENT THE ACTUAL WEBSITE, INCLUDING ALL INTERACTIONS, ANIMATIONS, SCENE TRANSITIONS, BUTTONS, IMAGE PLACEHOLDERS, AND MUSIC CONTROLS.
+
+Do not ask me questions. Make sensible creative decisions wherever details are missing, while preserving every requirement below.
+
+==================================================
+
+1. TECH STACK AND DEVELOPMENT RULES
+   ==================================================
+
+Use:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS, if appropriate
+* Framer Motion for polished UI animations
+* CSS keyframes for continuous ambient animations
+* Lucide React for icons, if needed
+
+Use additional lightweight libraries only when they provide a clear benefit.
+
+Requirements:
+
+1. The website must run correctly using the available development environment.
+2. All buttons must perform their intended actions.
+3. Every scene must be implemented, not merely described.
+4. Navigation between scenes must work without reloading the page.
+5. Use reusable React components.
+6. Maintain clean, readable, modular code.
+7. Avoid unnecessary dependencies and excessively complicated architecture.
+8. Ensure the website works on desktop, laptops, tablets, and mobile devices.
+9. Handle animation timing and component mounting carefully to prevent glitches.
+10. Avoid broken images, missing assets, console errors, and nonfunctional interactions.
+11. Use smooth transitions between scenes.
+12. Do not use browser alert boxes, confirm boxes, or intrusive pop-ups.
+13. Do not use robotic transitions, abrupt animation cuts, excessive bouncing, or generic AI-generated landing-page layouts.
+
+IMPORTANT: Prioritise visual quality, working interactions, and reliability over unnecessary technical complexity.
+
+==================================================
+2. THE VISUAL IDENTITY
+======================
+
+The website must have one consistent visual identity throughout the experience.
+
+COLOUR PALETTE:
+
+* Primary pastel pink: #F8BBD0
+* Soft blush pink: #FCE4EC
+* Cotton-candy pink: #F7A8C4
+* Warm white: #FFFDFE
+* Lavender: #E8DDF8
+* Rose pink accents: #FF6FA5
+* Soft dark text: #5A3D4D
+* Pale peach: #FFE1D2
+
+These colours are starting points. You may refine them for a more harmonious visual result.
+
+DESIGN STYLE:
+
+* Dreamy, romantic, cute, feminine, and playful.
+* Soft gradients and subtle pink ambient lighting.
+* Rounded shapes and organic decorative elements.
+* Delicate hearts, sparkles, stars, petals, tiny clouds, and floating particles.
+* Cute cat stickers and animated cat characters.
+* Soft shadows and subtle depth.
+* Beautiful whitespace and intentional composition.
+* Large, expressive headings.
+* Rounded, readable typography.
+* Gentle glass-like effects only where appropriate.
+
+Avoid:
+
+* Excessive neon.
+* Harsh black backgrounds.
+* Aggressive visual effects.
+* Corporate dashboards.
+* Generic SaaS design.
+* Overloaded screens.
+* Excessive emojis replacing actual design.
+* Randomly generated decorations that obscure content.
+* Excessive blur or expensive effects that reduce performance.
+
+The website should resemble a carefully art-directed interactive digital birthday scrapbook combined with a cute animated storybook.
+
+Use subtle ambient animations throughout the experience, but keep the content readable.
+
+==================================================
+3. CRITICAL ASSET MANAGEMENT SYSTEM
+===================================
+
+I WILL PERSONALLY SELECT AND REPLACE THE FINAL PHOTOS, VIDEOS, GIFS, AND MUSIC.
+
+Do not hardcode my personal memories into complicated components.
+
+Create a central asset configuration file:
+
+src/config/birthdayAssets.ts
+
+This file must contain clearly named asset paths for EVERY replaceable image, GIF, video, and music file used throughout the website.
+
+For example:
+
+export const birthdayAssets = {
+openingCat: "/assets/cats/opening-cat.gif",
+giftBoxCat: "/assets/cats/box-cat.png",
+birthdayDecorations: [
+"/assets/cats/cat-01.gif",
+"/assets/cats/cat-02.gif",
+"/assets/cats/cat-03.gif"
+],
+heartPhoto: "/assets/photos/heart-photo.jpg",
+angryCat: "/assets/cats/angry-cat.gif",
+throwingCat: "/assets/cats/throwing-cat.gif",
+studioMonster: "/assets/characters/studio-monster.gif",
+iceCream: "/assets/objects/ice-cream.png",
+memoryPhotos: [],
+memoryVideos: [],
+birthdayMusic: "/assets/audio/birthday-song.mp3"
+};
+
+This is an illustrative structure. Expand it to include every asset required by the complete website.
+
+Create a predictable public asset directory:
+
+public/
+assets/
+cats/
+characters/
+photos/
+videos/
+music/
+objects/
+backgrounds/
+
+Create a README.md explaining exactly how I can replace each asset.
+
+I want to open the project folder, find the appropriate image, replace the file with my own image using the same filename, and have the website display my replacement without editing the React components.
+
+For example, replacing:
+
+public/assets/photos/heart-photo.jpg
+
+with my chosen photograph should update the photograph shown in the appropriate scene.
+
+For each scene, provide descriptive filenames rather than names such as image1.png or img2.jpg.
+
+Create a complete asset manifest with:
+
+* Asset key.
+* Expected filename.
+* Scene where the asset appears.
+* Recommended format.
+* Whether it is optional.
+* Whether multiple assets are supported.
+
+IMPORTANT ASSET RULES:
+
+1. Use actual temporary demo assets or tasteful placeholders.
+2. Never pretend that my personal photos have already been supplied.
+3. Never invent photographs of the birthday girl.
+4. Never use the uploaded reference images as permanent personal memories.
+5. Do not make my website dependent on external image URLs.
+6. Use local assets wherever practical.
+7. If a demo asset is unavailable, create a polished placeholder using HTML, CSS, or SVG.
+8. Use CSS-drawn decorations and simple SVG illustrations when suitable.
+9. Use local placeholder GIFs or replaceable animation files for the cat and monster characters.
+10. If a local image is missing, show a visually attractive fallback rather than a broken-image icon.
+11. Make every replaceable asset easy to identify.
+12. Allow image, GIF, and video assets to be changed independently.
+13. Use the actual filename extensions consistently.
+14. Do not make me edit source code every time I want to change a photograph.
+
+The reference images I upload are visual inspiration for the style of cats, cute stickers, and the photography studio.
+
+Use them to understand the visual direction, not as restrictions on the entire design.
+
+The finished result must look cohesive even when temporary assets are being used.
+
+==================================================
+4. SCENE ONE: THE GIANT MYSTERY GIFT BOX
+========================================
+
+This is the opening screen and the first thing the visitor sees.
+
+Make the initial viewport feel magical and immersive.
+
+BACKGROUND:
+
+* Full-screen pastel pink and blush gradient.
+* Soft ambient glow.
+* Tiny floating hearts and sparkles.
+* A few subtle decorative cat elements.
+* Gentle movement in the background.
+
+MAIN COMPOSITION:
+
+Place a giant, beautifully illustrated wrapped birthday present near the centre of the screen.
+
+The gift should be the main visual focus.
+
+The present must have:
+
+* Beautiful pastel-pink wrapping paper.
+* A decorative ribbon.
+* A large bow.
+* Soft shadows.
+* Subtle floating or breathing animation.
+* A small highlight that makes the wrapping feel polished.
+
+Beside the present, show an adorable animated cat character.
+
+Use a replaceable cat image or GIF.
+
+The cat should appear to wave, point towards the present, or make a welcoming gesture.
+
+The cat must have a small speech bubble containing:
+
+"psst... your birthday surprise is inside! 🎀"
+
+Below it, show a second instruction:
+
+"Hold the ribbon and slide to unwrap your gift!"
+
+IMPORTANT INTERACTION:
+
+Implement an actual draggable ribbon or pull-tab attached to the present.
+
+The visitor must be able to:
+
+* Click and drag the ribbon with a mouse.
+* Drag it using touch on mobile.
+* See the ribbon follow their movement.
+* Receive subtle visual feedback while dragging.
+* Release the ribbon to complete the interaction when the required distance has been reached.
+
+Use pointer events so mouse and touch work consistently.
+
+As the ribbon is dragged:
+
+* The bow moves naturally.
+* The wrapping begins to loosen.
+* Small sparkles appear.
+* The gift reacts with a subtle motion.
+
+When the ribbon reaches the required threshold:
+
+* Trigger a satisfying unwrapping animation.
+* Animate the ribbon away.
+* Animate the wrapping panels opening or separating.
+* Reveal a bright, warm pink glow from inside the box.
+* Release floating hearts and stars.
+* Reveal a large birthday greeting.
+
+The reveal text must say:
+
+"HAPPY BIRTHDAY!! 🎀"
+
+Below it, display:
+
+"Today, the entire universe is celebrating YOU."
+
+Surround the greeting with cute cat stickers and dancing cat GIFs.
+
+Use several small cat decorations around the edges of the viewport. Some can dance, wave, wiggle, or float gently.
+
+Do not allow the GIFs to overlap the primary text.
+
+Add a prominent button:
+
+"OPEN YOUR BIRTHDAY UNIVERSE ✨"
+
+The button should have:
+
+* Rounded pill styling.
+* A subtle pink gradient.
+* A gentle glow.
+* A polished hover effect.
+* A press animation.
+* A clear focus state.
+
+The button should only become active after the gift has been opened.
+
+Clicking it begins the next cinematic scene.
+
+Do not make the visitor drag endlessly. Include an accessible alternative: clicking the ribbon or using the button after a short interaction should also open the gift.
+
+==================================================
+5. SCENE TWO: THE ROCKET THAT CRASHES INTO KIIT
+===============================================
+
+This scene should be funny, unexpected, cute, and cinematic.
+
+After clicking the button, smoothly transition to a playful outer-space environment.
+
+Begin with a short introductory message:
+
+"Okay, birthday girl... ready for a tiny adventure? 🚀"
+
+A cute cartoon rocket enters the scene.
+
+The rocket should:
+
+* Have a pastel pink and white body.
+* Have expressive little eyes or a cute face.
+* Leave behind a trail of pink sparkles.
+* Emit soft, animated exhaust.
+* Move with smooth acceleration and deceleration.
+
+A cute cat astronaut must visibly sit inside or pilot the rocket.
+
+Use a replaceable cat astronaut asset if available. Otherwise, create a simple original cartoon illustration.
+
+The rocket should fly across the screen.
+
+Gradually reveal a large cartoon planet.
+
+The planet must be clearly labelled:
+
+"KIIT"
+
+This label is an intentional part of the joke. Do not replace it with a generic planet name.
+
+The rocket should collide with the KIIT planet in a playful cartoon impact.
+
+ANIMATION SEQUENCE:
+
+1. The rocket flies into the scene.
+2. The cat pilot looks excited.
+3. The KIIT planet enters the viewport.
+4. The rocket changes direction slightly towards the planet.
+5. The collision happens.
+6. Trigger a large, stylised cartoon explosion.
+7. Show expanding pastel-pink and peach clouds, stars, and harmless cartoon debris.
+8. Flash the screen briefly with a warm white-pink light.
+9. Fade into a nearly white screen.
+
+Make the explosion visually impressive but friendly.
+
+Do not use realistic destruction, disturbing imagery, or violent effects.
+
+The white flash must be short, tasteful, and accessibility-conscious. Respect reduced-motion settings and avoid aggressive repeated flashes.
+
+The explosion is a transition into the next memory scene, not a dead end.
+
+Implement the sequence with animation states and reliable timing.
+
+Prevent accidental repeated triggering while the collision animation is running.
+
+==================================================
+6. SCENE THREE: THE HEART PHOTO AND THE TEASING MESSAGE
+=======================================================
+
+After the rocket collision, the screen should fade into a clean white and blush-pink environment.
+
+This scene should feel personal, like opening a memory in a digital scrapbook.
+
+Use a beautiful animated heading:
+
+"Mission accomplished... now, a little memory. 💗"
+
+Allow the heading to appear with a soft fade and gentle upward movement.
+
+Place one large photograph in the centre or slightly to one side.
+
+ASSET:
+heartPhoto
+
+This photograph will be supplied by me later.
+
+The photograph I intend to use shows the girl making a heart shape with her hands.
+
+Until I replace the asset, show an elegant image placeholder with a subtle pink frame and a small camera icon.
+
+Do not generate a fake photograph of her.
+
+The photograph should have:
+
+* Rounded corners.
+* A delicate pink border.
+* A soft shadow.
+* A subtle entrance animation.
+* A very gentle floating or parallax effect.
+* A responsive aspect ratio.
+
+Make the photo easy to enlarge using a polished lightbox interaction if appropriate.
+
+Beside or below the photo, display the following message in a beautiful, readable layout.
+
+Use this exact English wording:
+
+"Do you remember this day, madam? 😭💗
+
+You were supposed to take MY picture that day, but somehow you managed to get your own perfect pictures instead. And the funniest part? You keep asking ME for my pictures, not the other way around! 😭😭
+
+The audacity. The talent. The priorities. 💀🎀
+
+But okayyy... it's your birthday, so I'll let you off the hook this time. 💗"
+
+Reveal the message in short, animated sections.
+
+Do not make the visitor wait too long for every individual word. Use a comfortable line-by-line reveal.
+
+Include a cute angry-cat GIF or illustration near the teasing message.
+
+The cat should look comically annoyed, with a small speech bubble:
+
+"EXCUSE ME, MADAM?! 😾"
+
+When the final part of the teasing message appears, transition into the next animated gag.
+
+Show a cute cartoon character lifting another character and tossing them gently upwards into a fluffy pink cloud.
+
+Use the replaceable asset:
+
+throwingCat
+
+The animation should feel like a silly cartoon gag, not actual violence.
+
+Display the final teasing line:
+
+"Next time, I'm throwing you into the clouds. Affectionately. 😤💗"
+
+Make this line playful, clearly exaggerated, and visually integrated into the scene.
+
+The throwing animation should trigger once when the message reaches this point.
+
+After the scene is complete, reveal a button:
+
+"OKAY OKAY, NEXT SURPRISE 🎀"
+
+Clicking the button should smoothly transition into the photography studio.
+
+==================================================
+7. SCENE FOUR: THE CUTE PHOTOGRAPHY STUDIO
+==========================================
+
+This scene must transform the entire visual environment.
+
+The visitor should feel as if they have entered a real photography studio.
+
+TRANSITION:
+
+Use a smooth scene transition in which:
+
+* The previous pink background fades away.
+* Studio lights illuminate.
+* A white studio backdrop unfolds or slides into position.
+* The floor and background gradually become visible.
+* Soft studio lighting turns on.
+
+STUDIO DESIGN:
+
+Use the uploaded photography studio reference image for general visual inspiration.
+
+Recreate the atmosphere with:
+
+* A large white seamless photography backdrop.
+* A white or pale neutral floor.
+* Two softbox lights, one on either side.
+* Ceiling-mounted studio lights.
+* Subtle shadows beneath objects.
+* A clean, spacious composition.
+
+The studio should feel like a miniature, charming photography set rather than a generic blank white page.
+
+Create the scene with CSS, SVG, or other lightweight illustrations where possible.
+
+The studio background must fill the main viewport.
+
+On the right or left side, place a cute animated monster character.
+
+The monster should:
+
+* Have a unique, adorable design.
+* Use pastel pink, lavender, and cream colours.
+* Have expressive eyes.
+* Move around playfully.
+* Occasionally peek into the viewport.
+* Run from one side to the other.
+* React to the visitor's presence.
+
+Use a replaceable animated GIF or a custom CSS/SVG character.
+
+Do not create a frightening monster.
+
+CHARACTER ENTRANCE:
+
+Initially, the monster is visible in the background, moving around.
+
+Then it suddenly notices the visitor.
+
+It stops.
+
+It looks towards the screen.
+
+It runs towards the foreground.
+
+It pops up close to the viewer with a cute entrance animation.
+
+Display a speech bubble:
+
+"WAIT!! I GOT YOU SOMETHING! 🍦"
+
+Then the monster reveals an adorable ice cream.
+
+Use the replaceable asset:
+
+iceCream
+
+The ice cream should have:
+
+* A cute, illustrated appearance.
+* Pastel colours.
+* A soft glow.
+* Floating sparkles.
+* A gentle floating animation.
+* A subtle pulsing highlight.
+
+The monster should present the ice cream towards the viewer.
+
+Add a short line:
+
+"Made with 100% birthday magic. ✨"
+
+IMPORTANT: THE ICE CREAM IS AN INTERACTIVE BUTTON.
+
+It must be immediately recognisable as clickable.
+
+Use a gentle pulsing glow, a subtle cursor response, and a small instruction:
+
+"Tap the ice cream to unwrap your final surprise!"
+
+The ice cream itself must be the main clickable element.
+
+Do not hide the interaction inside an unrelated navigation menu.
+
+When the ice cream is clicked:
+
+* Play a small, satisfying sparkle animation.
+* Scale the ice cream towards the viewer.
+* Increase its glow slightly.
+* Transition into the final memory experience.
+
+Prevent double-clicks from triggering the transition multiple times.
+
+==================================================
+8. SCENE FIVE: THE FINAL PHOTO, VIDEO, AND MUSIC EXPERIENCE
+===========================================================
+
+This is the emotional finale of the entire website.
+
+The transition should feel like entering a private, dreamy birthday memory space.
+
+The colour palette returns to soft pink, blush, cream, and lavender.
+
+The ice cream interaction should create a visual transition, such as the ice cream expanding into a glowing pink portal or a soft circular reveal.
+
+The final screen must feel personal, romantic, warm, and memorable.
+
+MAIN HEADING:
+
+"One Last Little Surprise... 💗"
+
+Below it:
+
+"Because your smile deserves its own little universe."
+
+Use a beautifully animated heading with subtle floating sparkles.
+
+PHOTO AND VIDEO EXPERIENCE:
+
+I will add my own photos and videos later.
+
+Use the following asset categories:
+
+* memoryPhotos
+* memoryVideos
+
+The website must support multiple photographs and multiple videos.
+
+Display them using a beautiful, responsive visual arrangement.
+
+Possible layouts include:
+
+* A scrapbook gallery.
+* A soft, staggered photo wall.
+* A horizontally scrolling memory carousel.
+* A cinematic slideshow.
+* A combination of photo cards and video memories.
+
+Choose a cohesive design rather than combining every layout.
+
+The result should feel like a curated collection of personal memories.
+
+Use:
+
+* Rounded image frames.
+* Soft pink borders.
+* Subtle shadows.
+* Smooth entrance animations.
+* Gentle hover effects.
+* Tasteful hearts and sparkles.
+* Elegant transitions between images.
+
+Videos must play using standard browser video controls or a clear custom playback interface.
+
+Do not automatically play every video.
+
+Do not make the photo gallery feel like a generic online shopping grid.
+
+ASSET REPLACEMENT:
+
+I want to be able to place additional photographs and videos in the relevant folders.
+
+Make the asset configuration support multiple files.
+
+Document exactly how I can register or replace these files.
+
+If a configuration entry is required for adding new images, explain this clearly in README.md.
+
+Do not promise automatic discovery of arbitrary files unless you actually implement it.
+
+==================================================
+9. BACKGROUND MUSIC
+===================
+
+I will provide the final song myself.
+
+For now, implement a replaceable demo music asset or a clearly documented music placeholder.
+
+Use:
+
+birthdayMusic
+
+The music should belong to the final memory experience.
+
+BEHAVIOUR:
+
+1. Do not autoplay audio immediately when the visitor first opens the website.
+2. Respect browser autoplay restrictions.
+3. Start the music only after an appropriate user interaction.
+4. Prefer starting the music when the visitor enters the final memory scene.
+5. Provide a visible, beautiful music control.
+6. Include play and pause functionality.
+7. Display the current playback state.
+8. Keep the control visually consistent with the birthday theme.
+9. Prevent duplicate audio playback.
+10. Clean up audio instances when the application is unmounted.
+11. Handle missing audio files gracefully.
+12. Do not display browser error messages to the visitor.
+
+A small floating music button with a subtle animated music-note icon would work well.
+
+The music must not interfere with the animations or make the interface sluggish.
+
+If browser autoplay is blocked, show a friendly prompt such as:
+
+"Tap to play our little soundtrack ♡"
+
+Do not attempt to bypass browser audio restrictions.
+
+==================================================
+10. MOTION DESIGN: ABSOLUTELY CRITICAL
+======================================
+
+The animation quality is one of the most important requirements.
+
+I want buttery-smooth, soft, natural motion.
+
+The website must NOT feel robotic.
+
+Use motion that feels organic and intentional.
+
+PREFERRED MOTION:
+
+* Gentle floating.
+* Slow drifting.
+* Soft easing.
+* Natural acceleration and deceleration.
+* Subtle rotations.
+* Light spring effects.
+* Small character reactions.
+* Smooth opacity transitions.
+* Soft scale transitions.
+* Delicate parallax.
+* Carefully timed cinematic scene transitions.
+
+Use easing curves similar to:
+cubic-bezier(0.22, 1, 0.36, 1)
+
+Use spring animations only where they feel appropriate.
+
+Do not apply the same bounce animation to every element.
+
+Each scene should have its own motion personality:
+
+* Gift scene: anticipation and playful interaction.
+* Rocket scene: acceleration, flight, and cinematic impact.
+* Memory scene: gentle, intimate transitions.
+* Studio scene: playful character movement.
+* Finale: floating, dreamy, emotional motion.
+
+PERFORMANCE:
+
+* Prefer transform and opacity animations.
+* Avoid expensive layout recalculations.
+* Avoid animating large blur filters continuously.
+* Avoid excessive particle counts.
+* Avoid unnecessary canvas rendering.
+* Avoid animations that cause horizontal scrolling.
+* Aim for smooth 60 FPS performance on ordinary laptops and modern phones.
+
+ACCESSIBILITY:
+
+* Respect prefers-reduced-motion.
+* Provide visible keyboard focus.
+* Ensure interactive elements can be reached with a keyboard.
+* Make text readable against its background.
+* Do not rely on animation alone to communicate important information.
+
+==================================================
+11. SOUND EFFECTS
+=================
+
+Optional subtle sound effects may enhance the experience.
+
+Potential sounds:
+
+* A tiny magical chime when the gift opens.
+* A gentle rocket launch sound.
+* A soft cartoon pop during the collision.
+* A tiny sparkle sound when the ice cream is revealed.
+
+Use replaceable local assets if these sounds are included.
+
+Do not make sounds autoplay unexpectedly.
+
+Keep sound effects subtle and optional.
+
+Provide a simple way to disable them or keep them off by default.
+
+==================================================
+12. RESPONSIVE DESIGN
+=====================
+
+The entire experience must work on:
+
+* Desktop computers.
+* Windows laptops.
+* Tablets.
+* Mobile phones.
+
+Desktop:
+Use spacious, cinematic compositions.
+
+Mobile:
+
+* Stack content intelligently.
+* Keep the gift box and cat visible.
+* Make the ribbon draggable with touch.
+* Ensure text does not become tiny.
+* Keep important buttons within reach.
+* Prevent characters from covering text.
+* Adapt the studio composition to a narrow screen.
+* Use touch-friendly controls.
+* Preserve the scene transitions.
+* Avoid horizontal scrolling.
+
+The final gallery must adapt to the available width.
+
+Never simply shrink the desktop layout until everything becomes unreadable.
+
+==================================================
+13. WEBSITE ARCHITECTURE
+========================
+
+Implement the project as a single-page interactive experience with clearly separated scenes.
+
+Suggested structure:
+
+src/
+components/
+AnimatedBackground.tsx
+CuteCat.tsx
+FloatingDecorations.tsx
+SceneTransition.tsx
+GiftBox.tsx
+RibbonSlider.tsx
+RocketAnimation.tsx
+ExplosionTransition.tsx
+MemoryPhoto.tsx
+AngryCat.tsx
+ThrowingAnimation.tsx
+PhotographyStudio.tsx
+StudioMonster.tsx
+InteractiveIceCream.tsx
+MemoryGallery.tsx
+MusicPlayer.tsx
+SceneNavigation.tsx
+
+scenes/
+GiftScene.tsx
+RocketScene.tsx
+MemoryScene.tsx
+StudioScene.tsx
+FinaleScene.tsx
+
+config/
+birthdayAssets.ts
+
+hooks/
+useSceneTransition.ts
+useReducedMotion.ts
+
+styles/
+animations.css
+
+App.tsx
+main.tsx
+
+public/
+assets/
+cats/
+characters/
+photos/
+videos/
+music/
+objects/
+backgrounds/
+sounds/
+
+README.md
+
+You may improve this structure if necessary, but keep the project modular and understandable.
+
+Use a scene state machine or another reliable state-management approach.
+
+Suggested scene states:
+
+* gift
+* rocket
+* memory
+* studio
+* finale
+
+Do not implement the entire experience as one enormous JSX component.
+
+Do not use full-page reloads to transition between scenes.
+
+Ensure that scene-specific timers, animations, audio, and event listeners are cleaned up correctly.
+
+==================================================
+14. USER EXPERIENCE AND FLOW
+============================
+
+The intended experience must follow this exact sequence:
+
+SCENE 1:
+The visitor opens the website.
+A giant wrapped present appears.
+A cute cat instructs the visitor to pull the ribbon.
+The visitor opens the gift.
+"HAPPY BIRTHDAY!!" appears.
+The visitor clicks "OPEN YOUR BIRTHDAY UNIVERSE ✨".
+
+SCENE 2:
+A cute cat pilots a rocket.
+The rocket flies towards the planet labelled "KIIT".
+A playful cartoon collision and explosion occur.
+The screen flashes softly and transitions to white.
+
+SCENE 3:
+A personal photograph appears.
+The birthday girl's heart-hand photo is displayed using a replaceable asset.
+The teasing English message appears in animated sections.
+An angry cat reacts.
+A cute throwing gag plays.
+The visitor clicks "OKAY OKAY, NEXT SURPRISE 🎀".
+
+SCENE 4:
+The screen transforms into a white photography studio.
+A cute monster runs around.
+The monster approaches the viewer.
+It presents a glowing, interactive ice cream.
+
+SCENE 5:
+The visitor clicks the ice cream.
+A magical transition opens the final memory experience.
+Photos and videos appear.
+The replaceable birthday song can play.
+The visitor can explore the gallery and revisit memories.
+
+THIS ORDER MUST NOT CHANGE.
+
+The main path must work without requiring the visitor to refresh the page.
+
+==================================================
+15. IMPORTANT TECHNICAL AND VISUAL DETAILS
+==========================================
+
+SCENE TRANSITIONS:
+
+Use smooth, cinematic transitions between scenes.
+
+Depending on the scene, these may include:
+
+* Fade-through-white.
+* Pink glow transitions.
+* Expanding circles.
+* Soft zoom transitions.
+* Particle reveals.
+* A brief light sweep.
+* Illustrated objects moving between scenes.
+
+Do not use the same transition everywhere.
+
+Transitions should connect the story rather than feel like separate website pages.
+
+SCROLLING:
+
+Prefer a full-screen, scene-based experience with controlled transitions.
+
+Avoid making the visitor scroll through a huge, conventional landing page to discover each scene.
+
+Where scrolling is useful, such as exploring the final gallery, allow it naturally.
+
+Ensure that the page does not accidentally scroll sideways.
+
+TEXT:
+
+All text must remain readable.
+
+Use an appropriate hierarchy of headings, captions, dialogue, and buttons.
+
+Keep the teasing message intact.
+
+Do not replace specified text with generic placeholder copy.
+
+Do not invent additional personal facts about the birthday girl.
+
+ASSETS:
+
+Do not embed large base64 images directly inside React components.
+
+Keep local assets organised in the public directory.
+
+Do not reference files that do not exist without a fallback.
+
+Do not depend on hotlinking third-party images.
+
+Do not use broken or meaningless image placeholders.
+
+If a temporary illustration is necessary, create a tasteful CSS or SVG illustration that can later be replaced with a real asset.
+
+==================================================
+16. COMPLETION CHECKLIST
+========================
+
+Before considering the project complete, verify every item.
+
+[ ] The website starts successfully.
+[ ] The initial gift scene looks polished.
+[ ] The ribbon can be dragged using a mouse.
+[ ] The ribbon can be dragged on mobile.
+[ ] Opening the gift triggers the complete reveal.
+[ ] Dancing cats and decorative elements appear.
+[ ] The first button starts the rocket sequence.
+[ ] A cat visibly pilots the rocket.
+[ ] The planet is labelled KIIT.
+[ ] The collision animation runs exactly once.
+[ ] The white transition reveals the memory scene.
+[ ] The heart-hand photograph has a replaceable asset path.
+[ ] The teasing message is displayed correctly.
+[ ] The angry cat appears.
+[ ] The throwing animation runs correctly.
+[ ] The next button opens the studio.
+[ ] The studio has a white photography backdrop and studio lights.
+[ ] The cute monster moves around and approaches the viewer.
+[ ] The monster presents the ice cream.
+[ ] The ice cream is clickable.
+[ ] Clicking it opens the finale.
+[ ] The final gallery supports multiple photographs.
+[ ] The final gallery supports multiple videos.
+[ ] The music can be played and paused.
+[ ] Missing assets have graceful fallbacks.
+[ ] All personal assets can be replaced using the documented file structure.
+[ ] All important interactions work with keyboard and touch.
+[ ] Reduced-motion preferences are respected.
+[ ] The layout works on desktop and mobile.
+[ ] No scene is missing.
+[ ] No button is decorative but nonfunctional.
+[ ] No accidental full-page reloads occur.
+[ ] No duplicate audio plays.
+[ ] No console errors remain.
+[ ] The README explains how to customise the website.
+
+==================================================
+17. FINAL IMPLEMENTATION INSTRUCTIONS
+=====================================
+
+Build the complete working website now.
+
+Do not respond with a tutorial about how I could build it.
+
+Do not merely provide code snippets.
+
+Implement the project files directly in the available environment.
+
+Prioritise the following in order:
+
+1. Functional end-to-end experience.
+2. Beautiful pink visual design.
+3. Smooth animations.
+4. Correct scene transitions.
+5. Easy asset replacement.
+6. Responsive design.
+7. Reliable playback and interactions.
+8. Clean project architecture.
+
+Use your creative judgement for the small design details I have not specified.
+
+However, do not change the core story, remove any of the five scenes, change the order, or omit the personal photograph, the KIIT rocket collision, the photography studio, the monster, or the interactive ice cream finale.
+
+The final result should feel like a lovingly crafted interactive birthday gift, full of tiny surprises, cute cats, personal jokes, and dreamy pink magic.
+
+Make it beautiful. Make it functional. Make every interaction feel intentional.
